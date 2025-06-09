@@ -11,7 +11,7 @@ export default function Home() {
   
   
   return (
-    <div className="">
+    <div className="bg-[#212121]">
      <Navabar/>
      <div id="home">
       <Introduction/>

@@ -20,7 +20,7 @@ const About = () => {
 
 
     return (
-        <div className=" h-[150vh] w-full flex flex-col items-center justify-center bg-black text-white">
+        <div className=" h-[150vh] w-full flex flex-col items-center justify-center  text-white">
             <div className="flex flex-col items-center">
                 <div className="mt-[25px] text-[50px] font-bold"> About Me</div>
                 <hr  className="w-[10vw] mw-[200 x]" />
