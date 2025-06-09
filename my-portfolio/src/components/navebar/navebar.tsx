@@ -14,10 +14,10 @@ const  Navebar = () => {
             <div>MOUAD SERROUKH</div>
         </div>
         <div className="w-[50%] flex justify-between font-bold  ">
-            <div>HOME</div>
-            <div>ABOUT</div>
-            <div>PROJECT</div>
-            <div>CONTACT</div>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECT</a>
+            <a href="#contact">CONTACT</a>
         </div>
 
     </div>

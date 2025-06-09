@@ -13,8 +13,18 @@ export default function Home() {
   return (
     <div className="">
      <Navabar/>
-     <Introduction/>
-     <About/>
+     <div id="home">
+      <Introduction/>
+     </div>
+     <div id="about">
+      <About/>
+     </div>
+     <div id="projects">
+        <Projects/>
+     </div>
+     <div id="contact">
+        <Contact/>
+     </div>
  
     </div>
   );

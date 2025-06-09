@@ -20,7 +20,7 @@ const About = () => {
 
 
     return (
-        <div className=" h-[100vh] w-full flex flex-col items-center justify-center bg-black text-white">
+        <div className=" h-[150vh] w-full flex flex-col items-center justify-center bg-black text-white">
             <div className="flex flex-col items-center">
                 <div className="mt-[25px] text-[50px] font-bold"> About Me</div>
                 <hr  className="w-[10vw] mw-[200 x]" />
@@ -37,8 +37,8 @@ const About = () => {
                         Currently, I specialize in JavaScript, React, Next.js, Laravel, and backend development,  
                         but I’m always eager to expand my skill set and contribute to innovative projects.
                     </div>
-                    <div className="mt-4"  >
-                        <Button  variant="contained">Projects</Button>
+                    <div className="mt-4 text-bold"  >
+                        <Button  variant="contained">CONTACT</Button>
 
                     </div>
                 </div>
