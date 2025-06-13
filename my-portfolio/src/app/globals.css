@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+
+
 html {
     scroll-behavior: smooth;
+  }
+
+
+  :root {
+    --font-primary: 'Inter', sans-serif;
+  }
+  
+  /* Usage in CSS or inline styles */
+  body {
+    font-family: var(--font-primary);
   }
