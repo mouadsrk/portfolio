@@ -74,7 +74,7 @@ const Contact = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/60"></div>
 
       {/* Main content */}
-      <div className={`relative z-10 flex h-full w-full flex-col items-center justify-center px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`relative z-10 flex h-full w-full flex-col items-center justify-center px-4 pt-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
         {/* Header Section */}
         <div className="flex flex-col items-center mb-12">
@@ -85,8 +85,8 @@ const Contact = () => {
           </div>
 
           {/* Title */}
-          <div className={`transition-all duration-500 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent leading-tight mb-4 text-center"
+          <div className={`  transition-all duration-500 delay-500  ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent leading-tight  mb-4 text-center"
                 style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
               GET IN
             </h1>

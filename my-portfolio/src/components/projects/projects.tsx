@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FolderOpen, ExternalLink, Github, ArrowRight } from 'lucide-react';
+import { FolderOpen, Github, ArrowRight } from 'lucide-react';
 import Projectdescription from "../Projectdescription/description";
 
 const Projects = () => {
@@ -18,7 +18,7 @@ const Projects = () => {
         {
             name: "E-Commerce Platform",
             description: "Full-stack e-commerce solution with payment integration and admin dashboard",
-            image: "/ecommerce.jpeg",
+            image: "/ping_pong.jpeg",
             technologies: ["Next.js", "Laravel", "MySQL"],
             githubUrl: "#",
             liveUrl: "#"
@@ -26,7 +26,7 @@ const Projects = () => {
         {
             name: "Task Management App",
             description: "Collaborative task management tool with real-time updates and team features",
-            image: "/taskapp.jpeg",
+            image: "/ping_pong.jpeg",
             technologies: ["React", "Firebase", "Tailwind"],
             githubUrl: "#",
             liveUrl: "#"
@@ -34,7 +34,7 @@ const Projects = () => {
         {
             name: "Portfolio Website",
             description: "Modern responsive portfolio website with smooth animations and interactive elements",
-            image: "/portfolio.jpeg",
+            image: "/ping_pong.jpeg",
             technologies: ["Next.js", "TypeScript", "Framer Motion"],
             githubUrl: "#",
             liveUrl: "#"
