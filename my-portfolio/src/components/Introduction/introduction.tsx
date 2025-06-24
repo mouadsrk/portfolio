@@ -68,7 +68,7 @@ const Introduction = () => {
       <div className={`relative z-10 flex h-full w-full flex-col items-center justify-center px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         
         {/* Greeting badge */}
-        <div className={`mb-8 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+        <div className={`mb-8 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
           <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
           <span className="text-sm font-medium text-white/90">Available for new opportunities</span>
         </div>
@@ -76,14 +76,14 @@ const Introduction = () => {
         {/* Name with animation */}
         <div className="text-center mb-6">
           <div className={`transition-all duration-500 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            <h1 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent leading-tight mb-2"
+            <h1 className="text-5xl sm:text-7xl font-black bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent leading-tight mb-2"
                 style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
               HEY, I'M
             </h1>
           </div>
           
           <div className={`transition-all duration-700 delay-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <h1 className="text-6xl md:text-8xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight"
+            <h1 className="text-5xl sm:text-7xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent leading-tight"
                 style={{ textShadow: '0 4px 20px rgba(147, 51, 234, 0.3)' }}>
               {nameText.slice(0, typingIndex)}
               {showCursor && <span className="text-purple-400">|</span>}
@@ -93,14 +93,14 @@ const Introduction = () => {
 
         {/* Role */}
         <div className={`mb-8 transition-all duration-500 delay-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          <div className="flex items-center gap-2 text-xl md:text-2xl font-semibold text-purple-300">
+          <div className="flex items-center gap-2 text-xl sm:text-2xl font-semibold text-purple-300">
             <Code2 className="w-6 h-6 animate-pulse" />
             <span>Full-Stack Developer</span>
           </div>
         </div>
 
         {/* Description */}
-        <p className={`text-center max-w-3xl text-lg md:text-xl font-medium text-white/80 leading-relaxed mb-12 px-4 transition-all duration-700 delay-1200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
+        <p className={`text-center max-w-3xl text-lg sm:text-xl font-medium text-white/80 leading-relaxed mb-12 px-4 transition-all duration-700 delay-1200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
            style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
           I craft <span className="text-purple-300 font-semibold">modern</span>, 
           <span className="text-pink-300 font-semibold"> responsive</span>, and 
@@ -150,13 +150,7 @@ const Introduction = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center gap-2 text-white/60">
-          <span className="text-sm font-medium">Scroll to explore</span>
-          <ArrowDown className="w-4 h-4" />
-        </div>
-      </div>
+    
 
       {/* Decorative elements */}
       <div className="absolute top-20 left-20 w-20 h-20 border border-purple-500/30 rounded-full animate-pulse"></div>

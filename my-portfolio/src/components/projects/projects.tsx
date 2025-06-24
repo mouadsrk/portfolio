@@ -8,37 +8,53 @@ const Projects = () => {
 
     const projectsData = [
         {
-            name: "Ping Pong Game",
-            description: "Web application that combines ping pong gameplay with integrated chat and friend system",
+            name: "Webserve",
+            description: "Lightweight HTTP server built from scratch in C++, capable of serving content with CGI support",
             image: "/ping_pong.jpeg",
-            technologies: ["React", "Node.js", "Socket.io"],
+            technologies: ["C++", "Sockets", "CGI"],
             githubUrl: "#",
             liveUrl: "#"
         },
         {
-            name: "E-Commerce Platform",
-            description: "Full-stack e-commerce solution with payment integration and admin dashboard",
+            name: "Inception",
+            description: "Docker-based system infrastructure setup hosting multiple services with Nginx, WordPress, and MariaDB",
             image: "/ping_pong.jpeg",
-            technologies: ["Next.js", "Laravel", "MySQL"],
+            technologies: ["Docker", "Nginx", "MariaDB", "WordPress"],
             githubUrl: "#",
             liveUrl: "#"
         },
         {
-            name: "Task Management App",
-            description: "Collaborative task management tool with real-time updates and team features",
-            image: "/ping_pong.jpeg",
-            technologies: ["React", "Firebase", "Tailwind"],
+            name: "Cub3D",
+            description: "Raycasting-based 3D game engine inspired by Wolfenstein 3D, built using the MiniLibX graphics library",
+            image: "/ping_pong.jpeg" ,
+            technologies: ["C", "Raycasting", "MiniLibX"],
             githubUrl: "#",
             liveUrl: "#"
         },
         {
-            name: "Portfolio Website",
-            description: "Modern responsive portfolio website with smooth animations and interactive elements",
-            image: "/ping_pong.jpeg",
-            technologies: ["Next.js", "TypeScript", "Framer Motion"],
+            name: "Minishell",
+            description: "Minimal Unix shell implementing built-in commands, piping, redirection, and signal handling",
+            image: "/ping_pong.jpeg" ,
+            technologies: ["C", "Unix", "Processes"],
             githubUrl: "#",
             liveUrl: "#"
-        }
+        },
+        {
+            name: "Push Swap",
+            description: "Sorting algorithm using a limited set of stack operations with optimal move calculation",
+            image: "/ping_pong.jpeg",
+            technologies: ["C", "Algorithms", "Data Structures"],
+            githubUrl: "#",
+            liveUrl: "#"
+        },
+        {
+            name: "So Long",
+            description: "2D tile-based adventure game using basic graphics rendering and event-driven game logic",
+            image: "/ping_pong.jpeg",
+            technologies: ["C", "MiniLibX", "Game Dev"],
+            githubUrl: "#",
+            liveUrl: "#"
+        }        
     ];
 
     useEffect(() => {

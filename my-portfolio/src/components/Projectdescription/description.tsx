@@ -95,15 +95,7 @@ const Projectdescription: React.FC<ProjectdescriptionProps> = ({
                             Code
                         </a>
                     )}
-                    {liveUrl && (
-                        <a 
-                            href={liveUrl}
-                            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-full transition-all duration-300 hover:scale-105"
-                        >
-                            <ExternalLink className="w-4 h-4" />
-                            Live Demo
-                        </a>
-                    )}
+                    
                 </div>
 
                 {/* Decorative element */}
