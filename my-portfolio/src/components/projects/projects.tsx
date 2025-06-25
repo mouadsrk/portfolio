@@ -10,17 +10,17 @@ const Projects = () => {
         {
             name: "Webserve",
             description: "Lightweight HTTP server built from scratch in C++, capable of serving content with CGI support",
-            image: "/ping_pong.jpeg",
+            image: "/http.svg",
             technologies: ["C++", "Sockets", "CGI"],
-            githubUrl: "#",
+            githubUrl: "https://github.com/mouadsrk/webServer",
             liveUrl: "#"
         },
         {
             name: "Inception",
             description: "Docker-based system infrastructure setup hosting multiple services with Nginx, WordPress, and MariaDB",
-            image: "/ping_pong.jpeg",
+            image: "/docker.png",
             technologies: ["Docker", "Nginx", "MariaDB", "WordPress"],
-            githubUrl: "#",
+            githubUrl: "https://github.com/mouadsrk/inception",
             liveUrl: "#"
         },
         {
@@ -28,7 +28,7 @@ const Projects = () => {
             description: "Raycasting-based 3D game engine inspired by Wolfenstein 3D, built using the MiniLibX graphics library",
             image: "/ping_pong.jpeg" ,
             technologies: ["C", "Raycasting", "MiniLibX"],
-            githubUrl: "#",
+            githubUrl: "https://github.com/mouadsrk/cub3d",
             liveUrl: "#"
         },
         {
@@ -36,7 +36,7 @@ const Projects = () => {
             description: "Minimal Unix shell implementing built-in commands, piping, redirection, and signal handling",
             image: "/ping_pong.jpeg" ,
             technologies: ["C", "Unix", "Processes"],
-            githubUrl: "#",
+            githubUrl: "https://github.com/mouadsrk/minishell",
             liveUrl: "#"
         },
         {
@@ -44,7 +44,7 @@ const Projects = () => {
             description: "Sorting algorithm using a limited set of stack operations with optimal move calculation",
             image: "/ping_pong.jpeg",
             technologies: ["C", "Algorithms", "Data Structures"],
-            githubUrl: "#",
+            githubUrl: "https://github.com/mouadsrk/push_swap",
             liveUrl: "#"
         },
         {
@@ -52,7 +52,7 @@ const Projects = () => {
             description: "2D tile-based adventure game using basic graphics rendering and event-driven game logic",
             image: "/ping_pong.jpeg",
             technologies: ["C", "MiniLibX", "Game Dev"],
-            githubUrl: "#",
+            githubUrl: "https://github.com/mouadsrk/so_long",
             liveUrl: "#"
         }        
     ];

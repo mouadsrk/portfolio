@@ -29,30 +29,7 @@ const Projectdescription: React.FC<ProjectdescriptionProps> = ({
                     fill 
                     alt={`${name} project image`}
                 />
-                
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-4 left-4 right-4 flex gap-2">
-                        {githubUrl && (
-                            <a 
-                                href={githubUrl}
-                                className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <Github className="w-4 h-4 text-white" />
-                            </a>
-                        )}
-                        {liveUrl && (
-                            <a 
-                                href={liveUrl}
-                                className="p-2 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-                                onClick={(e) => e.stopPropagation()}
-                            >
-                                <ExternalLink className="w-4 h-4 text-white" />
-                            </a>
-                        )}
-                    </div>
-                </div>
+
             </div>
 
             {/* Content */}
@@ -83,12 +60,12 @@ const Projectdescription: React.FC<ProjectdescriptionProps> = ({
                         ))}
                     </div>
                 )}
-
                 {/* Action Buttons */}
                 <div className="flex gap-3 pt-2">
                     {githubUrl && (
                         <a 
                             href={githubUrl}
+                             target="_blank"
                             className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/80 hover:text-white bg-white/5 hover:bg-white/10 rounded-full border border-white/20 hover:border-white/30 transition-all duration-300"
                         >
                             <Github className="w-4 h-4" />

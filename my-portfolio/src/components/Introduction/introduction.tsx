@@ -135,13 +135,14 @@ const Introduction = () => {
         {/* Social Links */}
         <div className={`flex gap-6 transition-all duration-500 delay-1600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
           {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Mail, href: "#", label: "Email" }
+            { icon: Github, href: "https://github.com/mouadsrk", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/mouad-serroukh/", label: "LinkedIn" },
+            
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}
               href={href}
+              target='_blank'
               className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:text-white hover:bg-white/20 hover:scale-110 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
             >
               <Icon className="w-5 h-5" />
