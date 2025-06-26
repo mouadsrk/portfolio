@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { useState, useEffect } from "react";
 
+import { useState, useEffect } from "react";
+import {Github, Linkedin} from 'lucide-react';
 
 
   
@@ -26,13 +26,13 @@ const Navebar = () => {
     return (
         <nav className={`fixed top-0 left-0 z-50 w-full transition-all duration-300 ${
             scrolled 
-                ? 'h-[70px] bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20' 
-                : 'h-[80px] bg-black/40 backdrop-blur-md'
+                ? 'h-[60px] bg-purple/70 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20' 
+                : 'h-[65px] bg-black/0 backdrop-blur-md'
         }`}>
             <div className="flex justify-between items-center h-full px-6 lg:px-12 xl:px-20">
                 {/* Logo Section */}
                 <div className="flex items-center gap-4 group cursor-pointer">
-                    <div className="relative">
+                    {/* <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
                         <Image  
                             className="rounded-full border-2 border-white/20 group-hover:border-purple-400/50 transition-all duration-300 group-hover:scale-110" 
@@ -41,7 +41,7 @@ const Navebar = () => {
                             width="45" 
                             height="45" 
                         />
-                    </div>
+                    </div> */}
                     <div className="text-white font-bold text-lg tracking-wide group-hover:text-purple-300 transition-colors duration-300">
                         MOUAD SERROUKH
                     </div>
@@ -90,6 +90,24 @@ const Navebar = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
+                </div>
+                <div className="hidden  md:block">
+                <div className="flex gap-4 sm:gap-6 transition-all duration-500 delay-1600 opacity-100 translate-y-0 ">
+          {[
+            { icon: Github, href: "https://github.com/mouadsrk", label: "GitHub" },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/mouad-serroukh/", label: "LinkedIn" },
+          ].map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target='_blank'
+              rel="noopener noreferrer"
+              className="p-2 sm:p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:text-white hover:bg-white/20 hover:scale-110 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+            >
+              <Icon className="w-3 h-3 sm:w-4 sm:h-4" />
+            </a>
+          ))}
+        </div>
                 </div>
             </div>
 

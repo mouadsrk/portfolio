@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Github, Linkedin, Code2, Sparkles } from 'lucide-react';
+import { ArrowDown, Code2, Sparkles } from 'lucide-react';
 
 type Particle = {
   id: number;
@@ -140,22 +140,7 @@ const Introduction = () => {
         </div>
 
         {/* Social Links */}
-        <div className={`flex gap-4 sm:gap-6 transition-all duration-500 delay-1600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          {[
-            { icon: Github, href: "https://github.com/mouadsrk", label: "GitHub" },
-            { icon: Linkedin, href: "https://www.linkedin.com/in/mouad-serroukh/", label: "LinkedIn" },
-          ].map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              target='_blank'
-              rel="noopener noreferrer"
-              className="p-2 sm:p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:text-white hover:bg-white/20 hover:scale-110 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
-            >
-              <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-            </a>
-          ))}
-        </div>
+       
       </div>
 
       {/* Decorative elements - Responsive and hidden on very small screens */}
