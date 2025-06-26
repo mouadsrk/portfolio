@@ -114,25 +114,7 @@ const About = () => {
                                 </p>
                             </div>
                             
-                            <div className="mt-8">
-                                <Button 
-                                    variant="contained"
-                                    className="group relative px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold hover:scale-105 transition-all duration-300"
-                                    sx={{
-                                        background: 'linear-gradient(45deg, #9333ea 30%, #ec4899 90%)',
-                                        '&:hover': {
-                                            background: 'linear-gradient(45deg, #a855f7 30%, #f472b6 90%)',
-                                            transform: 'scale(1.05)',
-                                            boxShadow: '0 10px 30px rgba(147, 51, 234, 0.3)'
-                                        }
-                                    }}
-                                >
-                                    <span className="flex items-center gap-2">
-                                        Contact Me
-                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                    </span>
-                                </Button>
-                            </div>
+                           
                         </div>
                     </div>
 

@@ -38,15 +38,36 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Reset submitted state after 3 seconds
-    setTimeout(() => setSubmitted(false), 3000);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+        
+        // Reset submitted state after 3 seconds
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        // Handle error response
+        console.error('Error:', data.message);
+        // You might want to show an error message to the user
+        alert(`Error: ${data.message}`);
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      // Handle network errors
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -203,24 +224,8 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Social Links */}
-        <div className={`flex gap-6 mt-12 transition-all duration-500 delay-1300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-          {[
-            { icon: Github, href: "#", label: "GitHub" },
-            { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Mail, href: "mailto:mouad@example.com", label: "Email" },
-            { icon: Phone, href: "tel:+1234567890", label: "Phone" }
-          ].map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:text-white hover:bg-white/20 hover:scale-110 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
-              title={label}
-            >
-              <Icon className="w-5 h-5" />
-            </a>
-          ))}
-        </div>
+        
+       
       </div>
 
       {/* Decorative elements */}

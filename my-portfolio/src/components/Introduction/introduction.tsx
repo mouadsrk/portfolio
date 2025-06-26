@@ -113,8 +113,7 @@ const Introduction = () => {
           {/* Primary CTA */}
           <a
             href="#projects"
-            className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 animate-bounce"
-            style={{ animationDuration: '3s' }}
+            className="group relative px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 "
           >
             <span className="relative z-10 flex items-center gap-2">
               View My Work

@@ -26,7 +26,7 @@ const Projectdescription: React.FC<ProjectdescriptionProps> = ({
                 <Image  
                     className="object-cover group-hover:scale-110 transition-transform duration-500" 
                     src={image || "/ping_pong.jpeg"} 
-                    fill 
+                    fill
                     alt={`${name} project image`}
                 />
 

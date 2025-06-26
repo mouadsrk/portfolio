@@ -8,9 +8,17 @@ const Projects = () => {
 
     const projectsData = [
         {
+            name: "Transcendence",
+            description: "Full-stack web application featuring real-time multiplayer ping-pong, chat system, user profiles, and authentication using OAuth2",
+            image: "/ping-removebg-preview.png",
+            technologies: ["NestJS", "Next.js", "PostgreSQL", "WebSockets", "Docker"],
+            githubUrl: "https://github.com/mouadsrk/PingPong",
+            liveUrl: "#"
+        },
+        {
             name: "Webserve",
             description: "Lightweight HTTP server built from scratch in C++, capable of serving content with CGI support",
-            image: "/http.svg",
+            image: "/http.png",
             technologies: ["C++", "Sockets", "CGI"],
             githubUrl: "https://github.com/mouadsrk/webServer",
             liveUrl: "#"
@@ -26,7 +34,7 @@ const Projects = () => {
         {
             name: "Cub3D",
             description: "Raycasting-based 3D game engine inspired by Wolfenstein 3D, built using the MiniLibX graphics library",
-            image: "/ping_pong.jpeg" ,
+            image: "/cub3d.jpg" ,
             technologies: ["C", "Raycasting", "MiniLibX"],
             githubUrl: "https://github.com/mouadsrk/cub3d",
             liveUrl: "#"
@@ -34,7 +42,7 @@ const Projects = () => {
         {
             name: "Minishell",
             description: "Minimal Unix shell implementing built-in commands, piping, redirection, and signal handling",
-            image: "/ping_pong.jpeg" ,
+            image: "/bash2.png" ,
             technologies: ["C", "Unix", "Processes"],
             githubUrl: "https://github.com/mouadsrk/minishell",
             liveUrl: "#"
@@ -42,7 +50,7 @@ const Projects = () => {
         {
             name: "Push Swap",
             description: "Sorting algorithm using a limited set of stack operations with optimal move calculation",
-            image: "/ping_pong.jpeg",
+            image: "/pushswap.png",
             technologies: ["C", "Algorithms", "Data Structures"],
             githubUrl: "https://github.com/mouadsrk/push_swap",
             liveUrl: "#"
@@ -50,7 +58,7 @@ const Projects = () => {
         {
             name: "So Long",
             description: "2D tile-based adventure game using basic graphics rendering and event-driven game logic",
-            image: "/ping_pong.jpeg",
+            image: "/solong.png",
             technologies: ["C", "MiniLibX", "Game Dev"],
             githubUrl: "https://github.com/mouadsrk/so_long",
             liveUrl: "#"
@@ -159,7 +167,8 @@ const Projects = () => {
                             Check out my GitHub for more projects and contributions to open source
                         </p>
                         <a 
-                            href="#" 
+                            target='_blanck'
+                            href="https://github.com/mouadsrk" 
                             className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
                         >
                             <Github className="w-5 h-5" />
