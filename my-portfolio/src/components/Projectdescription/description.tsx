@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import { ExternalLink, Github, Code2, Sparkles } from 'lucide-react';
+import {Github, Code2, Sparkles } from 'lucide-react';
 
 interface ProjectdescriptionProps {
     name: string;
@@ -8,7 +8,6 @@ interface ProjectdescriptionProps {
     image: string;
     technologies?: string[];
     githubUrl?: string;
-    liveUrl?: string;
 }
 
 const Projectdescription: React.FC<ProjectdescriptionProps> = ({ 
@@ -17,7 +16,6 @@ const Projectdescription: React.FC<ProjectdescriptionProps> = ({
     image, 
     technologies = [],
     githubUrl,
-    liveUrl 
 }) => {
     return (
         <div className="group relative bg-white/5 backdrop-blur-md rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/10">

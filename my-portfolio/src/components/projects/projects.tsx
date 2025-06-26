@@ -2,9 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { FolderOpen, Github, ArrowRight } from 'lucide-react';
 import Projectdescription from "../Projectdescription/description";
 
+
+
+type Particle = {
+    id: number;
+    left: number;
+    top: number;
+    animationDelay: number;
+    animationDuration: number;
+  };
+
 const Projects = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [particles, setParticles] = useState([]);
+    const [particles, setParticles] = useState<Particle[]>([]);
 
     const projectsData = [
         {
@@ -13,7 +23,6 @@ const Projects = () => {
             image: "/ping-removebg-preview.png",
             technologies: ["NestJS", "Next.js", "PostgreSQL", "WebSockets", "Docker"],
             githubUrl: "https://github.com/mouadsrk/PingPong",
-            liveUrl: "#"
         },
         {
             name: "Webserve",
@@ -21,7 +30,6 @@ const Projects = () => {
             image: "/http.png",
             technologies: ["C++", "Sockets", "CGI"],
             githubUrl: "https://github.com/mouadsrk/webServer",
-            liveUrl: "#"
         },
         {
             name: "Inception",
@@ -29,7 +37,6 @@ const Projects = () => {
             image: "/docker.png",
             technologies: ["Docker", "Nginx", "MariaDB", "WordPress"],
             githubUrl: "https://github.com/mouadsrk/inception",
-            liveUrl: "#"
         },
         {
             name: "Cub3D",
@@ -37,7 +44,6 @@ const Projects = () => {
             image: "/cub3d.jpg" ,
             technologies: ["C", "Raycasting", "MiniLibX"],
             githubUrl: "https://github.com/mouadsrk/cub3d",
-            liveUrl: "#"
         },
         {
             name: "Minishell",
@@ -45,7 +51,6 @@ const Projects = () => {
             image: "/bash2.png" ,
             technologies: ["C", "Unix", "Processes"],
             githubUrl: "https://github.com/mouadsrk/minishell",
-            liveUrl: "#"
         },
         {
             name: "Push Swap",
@@ -53,7 +58,6 @@ const Projects = () => {
             image: "/pushswap.png",
             technologies: ["C", "Algorithms", "Data Structures"],
             githubUrl: "https://github.com/mouadsrk/push_swap",
-            liveUrl: "#"
         },
         {
             name: "So Long",
@@ -61,7 +65,6 @@ const Projects = () => {
             image: "/solong.png",
             technologies: ["C", "MiniLibX", "Game Dev"],
             githubUrl: "https://github.com/mouadsrk/so_long",
-            liveUrl: "#"
         }        
     ];
 
@@ -151,7 +154,6 @@ const Projects = () => {
                                 image={project.image}
                                 technologies={project.technologies}
                                 githubUrl={project.githubUrl}
-                                liveUrl={project.liveUrl}
                             />
                         </div>
                     ))}

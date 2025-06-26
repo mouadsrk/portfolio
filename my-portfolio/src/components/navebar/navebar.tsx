@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
+
+
+  
+
 const Navebar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('home');
@@ -15,7 +19,7 @@ const Navebar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleNavClick = (section) => {
+    const handleNavClick = (section : string) => {
         setActiveSection(section);
     };
 

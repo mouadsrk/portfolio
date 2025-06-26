@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from "@mui/material";
-import { User, Code2, Sparkles, ArrowRight } from 'lucide-react';
+import { User, Code2, Sparkles} from 'lucide-react';
 import Skills from "../Skills/skills";
 
 const myskills: string[] = [
@@ -13,9 +12,18 @@ const myskills: string[] = [
     "laravel",
 ];
 
+
+type Particle = {
+    id: number;
+    left: number;
+    top: number;
+    animationDelay: number;
+    animationDuration: number;
+}
+
 const About = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [particles, setParticles] = useState([]);
+    const [particles, setParticles] = useState<Particle[]>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -101,7 +109,7 @@ const About = () => {
                             
                             <div className="space-y-4 text-white/90 leading-relaxed">
                                 <p>
-                                    I'm a <span className="text-purple-300 font-semibold">passionate full-stack developer</span> with a strong foundation in modern web technologies.
+                                    I&apos;m a <span className="text-purple-300 font-semibold">passionate full-stack developer</span> with a strong foundation in modern web technologies.
                                 </p>
                                 <p>
                                     I love creating <span className="text-pink-300 font-semibold">efficient, scalable, and user-friendly</span> applications that solve real problems.
@@ -110,7 +118,7 @@ const About = () => {
                                     Continuously learning and experimenting with new tools and frameworks, I thrive in collaborative environments and enjoy tackling challenges head-on.
                                 </p>
                                 <p>
-                                    Currently, I specialize in <span className="text-blue-300 font-semibold">JavaScript, React, Next.js, Laravel, and backend development</span>, but I'm always eager to expand my skill set and contribute to innovative projects.
+                                    Currently, I specialize in <span className="text-blue-300 font-semibold">JavaScript, React, Next.js, Laravel, and backend development</span>, but I&apos;m always eager to expand my skill set and contribute to innovative projects.
                                 </p>
                             </div>
                             

@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, Github, Linkedin, Mail, Code2, Sparkles } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Code2, Sparkles } from 'lucide-react';
+
+
+type Particle = {
+  id: number;
+  left: number;
+  top: number;
+  animationDelay: number;
+  animationDuration: number;
+};
+
 
 const Introduction = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [typingIndex, setTypingIndex] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
 
   const nameText = "MOUAD SERROUKH";
 
@@ -78,7 +88,7 @@ const Introduction = () => {
           <div className={`transition-all duration-500 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             <h1 className="text-5xl sm:text-7xl font-black bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent leading-tight mb-2"
                 style={{ textShadow: '0 4px 20px rgba(0,0,0,0.3)' }}>
-              HEY, I'M
+              HEY, I&apos;M
             </h1>
           </div>
           

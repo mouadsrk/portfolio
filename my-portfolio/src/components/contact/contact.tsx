@@ -1,9 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Send, User, MessageSquare, Sparkles, Github, Linkedin, Phone } from 'lucide-react';
+import { Mail, Send, User, MessageSquare, Sparkles } from 'lucide-react';
+
+
+type Particle = {
+  id: number;
+  left: number;
+  top: number;
+  animationDelay: number;
+  animationDuration: number;
+};
+
+
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -26,7 +37,7 @@ const Contact = () => {
     setParticles(particleData);
   }, []);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e :React.ChangeEvent<HTMLInputElement |HTMLTextAreaElement >) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -34,7 +45,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e : React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -102,7 +113,7 @@ const Contact = () => {
           {/* Status badge */}
           <div className={`mb-8 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             <Sparkles className="w-4 h-4 text-yellow-400 animate-pulse" />
-            <span className="text-sm font-medium text-white/90">Let's start a conversation</span>
+            <span className="text-sm font-medium text-white/90">Let&apos;s start a conversation</span>
           </div>
 
           {/* Title */}
@@ -123,7 +134,7 @@ const Contact = () => {
           {/* Description */}
           <p className={`text-center max-w-2xl text-lg md:text-xl font-medium text-white/80 leading-relaxed transition-all duration-700 delay-900 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}
              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
-            Have a question or want to connect? Just fill out the form below, and I'll get back to you shortly!
+            Have a question or want to connect? Just fill out the form below, and I&apos;ll get back to you shortly!
           </p>
         </div>
 
