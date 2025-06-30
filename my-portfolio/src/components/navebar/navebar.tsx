@@ -135,11 +135,16 @@ const Navebar = () => {
             </div>
           {
               naveRotation ? 
-              <div  className="fixed w-full   h-screen top-0 left-0 z-50 bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 flex flex-col justify-center items-center  duration-700 delay-200">
+              <div  className="fixed w-full   h-screen top-0 left-0 z-50 bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 flex flex-col justify-center items-center  duration-700 delay-200">
                 <button
                     onClick={handelNaverotation}
                     >
-                    <X  className=" absolute top-5 right-8 text-white hover:scale-105"
+                    <X  className={` absolute top-5 right-8 text-white hover:scale-105 
+                        ${isVisible
+                        ? 'opacity-100'
+                        : 'opacity-0'
+                        }
+                        `}
                     ></X>
                 </button>
                     <div className="flex flex-col justify-center h-[40%] gap-8 delay-1000"  ref={elementRef} >
