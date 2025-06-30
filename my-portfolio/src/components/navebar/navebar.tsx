@@ -14,7 +14,7 @@ const Navebar = () => {
 
 
 
-    const handelNaverotation  =(e : React.MouseEvent<HTMLButtonElement> | React.MouseEventHandler<SVGSVGElement>) =>
+    const handelNaverotation  =() =>
     {
         setTimeout(() => { 
             setIsVisible((prev) => !prev)
@@ -148,7 +148,7 @@ const Navebar = () => {
                             { name: 'ABOUT', href: '#about', id: 'about' },
                             { name: 'PROJECTS', href: '#projects', id: 'projects' },
                             { name: 'CONTACT', href: '#contact', id: 'contact' }
-                            ].map((item , index) => (
+                            ].map((item ) => (
                                 <a
                                     key={item.id}
                                     href={item.href}
