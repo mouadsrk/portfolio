@@ -3,7 +3,6 @@ import { FolderOpen, Github, ArrowRight } from 'lucide-react';
 import Projectdescription from "../Projectdescription/description";
 
 
-
 type Particle = {
     id: number;
     left: number;
@@ -48,7 +47,7 @@ const Projects = () => {
         {
             name: "Minishell",
             description: "Minimal Unix shell implementing built-in commands, piping, redirection, and signal handling",
-            image: "/bash2.png" ,
+            image: "/bash2.png",
             technologies: ["C", "Unix", "Processes"],
             githubUrl: "https://github.com/mouadsrk/minishell",
         },

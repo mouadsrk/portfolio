@@ -17,3 +17,8 @@ html {
   body {
     font-family: var(--font-primary);
   }
+
+
+  .animate-forwards {
+    animation-fill-mode: forwards;
+  }
