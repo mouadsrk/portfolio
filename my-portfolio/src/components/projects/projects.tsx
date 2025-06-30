@@ -24,7 +24,7 @@ const Projects = () => {
             githubUrl: "https://github.com/mouadsrk/PingPong",
         },
         {
-            name: "Webserve",
+            name: "webServer",
             description: "Lightweight HTTP server built from scratch in C++, capable of serving content with CGI support",
             image: "/http.png",
             technologies: ["C++", "Sockets", "CGI"],

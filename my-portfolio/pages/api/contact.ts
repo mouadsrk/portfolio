@@ -19,6 +19,7 @@ export default async function handler(
     return res.status(400).json({ message: 'Missing fields' });
   }
 
+console.log(`  name ${name} email ${email} message  ${message} `)
   try {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -28,11 +29,14 @@ export default async function handler(
       },
     });
 
+
+
+
     await transporter.sendMail({
-      from: email,
+      from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      subject: `Portfolio Message from ${name}`,
-      text: message,
+      subject: `Portfolio Message from ${name} ${email}`,
+      text: `${message}  \n \n from gmail ${email} `,
     });
 
     res.status(200).json({ message: 'Email sent successfully' });
