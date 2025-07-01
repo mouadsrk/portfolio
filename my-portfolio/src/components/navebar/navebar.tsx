@@ -194,7 +194,29 @@ const Navebar = () => {
                             }`}></div>
                             <div className=" absolute -bottom-2 left-0  w-full h-0.5  h-0.5  opacity-0 group-hover:opacity-100 scale-x-0 group-hover:scale-x-100 bg-gradient-to-r from-white/50 to-white/30 duration-300 " ></div>
                             </a>
-                        ))}
+                        ))
+                        
+                        }
+                         <div className="block">
+                            <div className="flex gap-4 sm:gap-6 transition-all duration-500 delay-1600 opacity-100 translate-y-0 ">
+                    {[
+                        { icon: Github, href: "https://github.com/mouadsrk", label: "GitHub" },
+                        { icon: Linkedin, href: "https://www.linkedin.com/in/mouad-serroukh/", label: "LinkedIn" },
+                    ].map(({ icon: Icon, href, label }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target='_blank'
+                            rel="noopener noreferrer"
+                            className="p-2 sm:p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white/70 hover:text-white hover:bg-white/20 hover:scale-110 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
+                        >
+                        <Icon className="w-6 h-6 " />
+                        </a>
+                    ))}
+                    </div>
+                        </div>
+            
+                        
                     </div>
                     </div>
               : <div></div>
