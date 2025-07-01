@@ -1,7 +1,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import {Github, Linkedin  , X} from 'lucide-react';
-
+import Image from 'next/image'
 
   
 
@@ -59,8 +59,16 @@ const Navebar = () => {
                             height="45" 
                         />
                     </div> */}
-                    <div className="text-white font-bold text-lg tracking-wide group-hover:text-purple-300 transition-colors duration-300">
+                    {/* <div className="text-white font-bold text-lg tracking-wide group-hover:text-purple-300 transition-colors duration-300">
                         MOUAD SERROUKH
+                    </div> */}
+                    <div>
+                        <Image
+                            src="/final.png"
+                            width={70}
+                            height={70}
+                            alt="Picture of the author"
+                            />
                     </div>
                 </div>
 
