@@ -40,6 +40,13 @@ const Navebar = () => {
         setActiveSection(section);
     };
 
+    const handleMobileNavClick = (section : string) => { 
+        setIsVisible((prev) => !prev)
+        setNaveRotation( (prev) => !prev);
+        setActiveSection(section);
+    };
+
+
     return (
         <nav className={`fixed top-0 left-0 z-49 w-full transition-all duration-300 ${
             scrolled 
@@ -143,7 +150,7 @@ const Navebar = () => {
             </div>
           {
               naveRotation ? 
-              <div  className="fixed w-full   h-screen top-0 left-0 z-50 bg-black/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 flex flex-col justify-center items-center  duration-700 delay-200">
+              <div  className="fixed w-full   h-screen top-0 left-0 z-50 bg-black backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20 flex flex-col justify-center items-center  duration-700 delay-200">
                 <button
                     onClick={handelNaverotation}
                     >
@@ -165,7 +172,7 @@ const Navebar = () => {
                                 <a
                                     key={item.id}
                                     href={item.href}
-                                    onClick={() => handleNavClick(item.id)}
+                                    onClick={() => handleMobileNavClick(item.id)}
                                     className={`relative z-50  tracking-wider font-semibold text-lg transition-transform duration-600     group ${
                                         activeSection === item.id 
                                         ? 'text-purple-400' 
