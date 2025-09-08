@@ -17,6 +17,13 @@ const Projects = () => {
 
     const projectsData = [
         {
+            name: "React Native Movie App",
+            description: "A sleek mobile app to browse, search, and view detailed movie information using the TMDB API.",
+            image: "/movie_app1.jpeg",
+            technologies: ["React Native", "Expo", "TMDB API"],
+            githubUrl: "https://github.com/mouadsrk/movie_App",
+          },
+        {
             name: "Transcendence",
             description: "Full-stack web application featuring real-time multiplayer ping-pong, chat system, user profiles, and authentication using OAuth2",
             image: "/ping-removebg-preview.png",

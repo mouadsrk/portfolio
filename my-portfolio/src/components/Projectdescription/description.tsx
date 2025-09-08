@@ -20,15 +20,16 @@ const Projectdescription: React.FC<ProjectdescriptionProps> = ({
     return (
         <div className="group relative bg-white/5 backdrop-blur-md rounded-3xl p-6 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/10">
             {/* Image Container */}
-            <div className="relative h-48 w-full mb-6 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20">
-                <Image  
-                    className="object-cover group-hover:scale-110 transition-transform duration-500" 
-                    src={image || "/ping_pong.jpeg"} 
-                    fill
-                    alt={`${name} project image`}
-                />
+            <div className="relative h-[300px] w-full mb-5 rounded-2xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20">
+            <Image
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
+                src={image || "/ping_pong.jpeg"}
+                alt={`${name} project image`}
+                fill
+                style={{ objectFit: "cover" }} // or "contain"
+            />
+            </div>  
 
-            </div>
 
             {/* Content */}
             <div className="space-y-4">
